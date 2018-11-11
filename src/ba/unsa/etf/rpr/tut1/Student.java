@@ -6,6 +6,11 @@ class Student {
     private int brojIndeksa;
     private int brojECTS;
 
+    Student(String imeIP, int indeks) {
+        imeIPrezime = imeIP;
+        brojECTS = indeks;
+    }
+
     String getImeIPrezime() {
         return imeIPrezime;
     }
@@ -32,5 +37,10 @@ class Student {
 
     public void setBrojECTS(int brojECTS) {
         this.brojECTS = brojECTS;
+    }
+
+    @Override
+    public String toString() {
+        return imeIPrezime;
     }
 }

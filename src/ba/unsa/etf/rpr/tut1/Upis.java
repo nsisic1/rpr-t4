@@ -35,4 +35,16 @@ class Upis {
     void setPlanStudija(PlanStudija planStudija) {
         this.planStudija = planStudija;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Upis) {
+            Upis u = (Upis) o;
+            return (getStudent() == u.getStudent() && getPredmet() == u.getPredmet() &&
+                getPlanStudija() == u.getPlanStudija());
+        } else {
+            return false;
+        }
+
+    }
 }

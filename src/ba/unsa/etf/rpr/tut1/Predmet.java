@@ -38,8 +38,13 @@ class Predmet {
         this.obavezan = obavezan;
     }
 
-    Set<Student> dajUpisaneStudente() {
+    String dajUpisaneStudente() {
         // poziva iz fakultet (staticki?)?
-        return Fakultet.dajStudentePredmeta(this);
+        Set<Student> studenti =  Fakultet.dajStudentePredmeta(this);
+        String retval = "";
+        for(Student s : studenti) {
+            retval += s.toString();
+        }
+        return retval;
     }
 }

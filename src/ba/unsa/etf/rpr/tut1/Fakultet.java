@@ -4,9 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Fakultet { // TODO sve staticko? - main metoda
-    static private Set<Predmet> predmeti;
-    static private Set<Student> upisani;
-    static private Set<Upis> upisi;
+    static private Set<Predmet> predmeti = new HashSet<Predmet>();
+    static private Set<Student> upisani = new HashSet<Student>();;
+    static private Set<Upis> upisi = new HashSet<Upis>();;
 
     static void dodajStudenta(Student student) {
         upisani.add(student);
