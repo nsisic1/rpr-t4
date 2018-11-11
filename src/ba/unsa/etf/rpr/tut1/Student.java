@@ -4,7 +4,7 @@ class Student {
 
     private String imeIPrezime;
     private int brojIndeksa;
-
+    private int brojECTS;
 
     String getImeIPrezime() {
         return imeIPrezime;
@@ -24,5 +24,13 @@ class Student {
 
     void upisiSemestar(int brojSemestra) {
 
+    }
+
+    public int getBrojECTS() {
+        return brojECTS;
+    }
+
+    public void setBrojECTS(int brojECTS) {
+        this.brojECTS = brojECTS;
     }
 }
