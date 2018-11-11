@@ -1,10 +1,18 @@
 package ba.unsa.etf.rpr.tut1;
 
-public class Predmet {
+import java.util.Set;
+
+class Predmet {
 
     private String naziv;
     private int brojECTS;
     private boolean obavezan;
+
+    Predmet(String naziv, int brojECTS, boolean obavezan) {
+        setNaziv(naziv);
+        setBrojECTS(brojECTS);
+        setObavezan(obavezan);
+    }
 
      String getNaziv() {
         return naziv;
@@ -28,5 +36,10 @@ public class Predmet {
 
     void setObavezan(boolean obavezan) {
         this.obavezan = obavezan;
+    }
+
+    Set<Student> dajUpisaneStudente() {
+        // poziva iz fakultet (staticki?)?
+        return Fakultet.dajStudentePredmeta(this);
     }
 }
