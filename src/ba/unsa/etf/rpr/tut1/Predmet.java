@@ -43,7 +43,7 @@ class Predmet {
         Set<Student> studenti =  Fakultet.dajStudentePredmeta(this);
         String retval = "";
         for(Student s : studenti) {
-            retval += s.toString();
+            retval += s.toString() + "\n";
         }
         return retval;
     }
